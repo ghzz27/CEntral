@@ -1,0 +1,201 @@
+@import './base.css';
+
+/* =====================================================
+   ANIMAÇÕES (usadas em todo o site)
+===================================================== */
+@keyframes aparecer {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes subir {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes entrar-esquerda {
+  from { opacity: 0; transform: translateX(-30px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes flutuar {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-10px); }
+}
+
+/* Classes prontas: basta colocar no HTML */
+.anim-subir     { animation: subir 0.7s ease both; }
+.anim-esquerda  { animation: entrar-esquerda 0.7s ease both; }
+.anim-flutuar   { animation: flutuar 6s ease-in-out infinite; }
+
+/* Respeita quem prefere menos movimento */
+@media (prefers-reduced-motion: reduce) {
+
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* =====================================================
+   LAYOUT
+===================================================== */
+.main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+
+.titulo-pagina {
+  text-align: center;
+  color: var(--preto);
+  font-size: 30px;
+  margin-bottom: 24px;
+}
+
+/* =====================================================
+   BOTÕES (classes reutilizáveis)
+===================================================== */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  background: var(--azul);
+  color: var(--branco);
+  border: 2px solid var(--azul);
+
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transicao);
+}
+
+.btn:hover {
+  background: var(--azul-escuro);
+  border-color: var(--azul-escuro);
+  color: var(--branco);
+  transform: translateY(-2px);
+  box-shadow: var(--sombra);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--azul);
+}
+
+/* =====================================================
+   CARTÃO (classe reutilizável)
+===================================================== */
+.card {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  padding: 28px;
+  transition: var(--transicao);
+}
+
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--sombra);
+}
+
+/* =====================================================
+   ANIMAÇÕES NOVAS
+===================================================== */
+
+/* Cards "erguidos" de baixo para cima quando aparecem (use v-revelar no elemento) */
+@keyframes erguer {
+  from { opacity: 0; clip-path: inset(100% 0 0 0); }
+  to   { opacity: 1; clip-path: inset(-30px); }
+}
+
+.revelar { opacity: 0; }
+
+.revelar.visivel {
+  animation: erguer 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+/* Botões com um brilho que atravessa ao passar o mouse */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -70%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+.btn:hover::after {
+  left: 130%;
+  transition: left 0.7s ease;
+}
+
+/* Quem prefere menos movimento vê os cards direto */
+@media (prefers-reduced-motion: reduce) {
+  .revelar { opacity: 1 !important; }
+}
+
+/* =====================================================
+   ESTADOS: carregando / vazio / erro
+===================================================== */
+.vazio {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 36px 24px;
+  text-align: center;
+  color: var(--texto-suave);
+  background: var(--branco);
+  border: 1px dashed var(--borda);
+  border-radius: var(--raio);
+}
+
+.vazio a { font-weight: 700; }
+
+.erro-box {
+  border-style: solid;
+  border-color: #f0c4c4;
+  background: #fff7f7;
+  color: #8a2d2d;
+}
+
+/* =====================================================
+   IMPRESSÃO / PDF
+   Esconde menu, rodapé, banner e botões para gerar um
+   PDF limpo do detalhe do projeto (Imprimir → Salvar como PDF).
+===================================================== */
+@media print {
+  .navbar,
+  #footer,
+  #main-banner,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+  }
+
+  .main-container {
+    margin: 0;
+    padding: 0;
+  }
+
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #ccc !important;
+  }
+
+  a[href]::after {
+    content: "";
+  }
+}

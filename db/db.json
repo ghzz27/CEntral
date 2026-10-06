@@ -1,0 +1,469 @@
+{
+  "categorias": [
+    {
+      "id": "construcao",
+      "nome": "Construção",
+      "subcategorias": [
+        {
+          "nome": "Casa residencial",
+          "itens": [
+            "Tijolo",
+            "Cimento",
+            "Areia",
+            "Brita",
+            "Ferro",
+            "Telha",
+            "Piso",
+            "Tinta"
+          ]
+        },
+        {
+          "nome": "Muro",
+          "itens": [
+            "Tijolo",
+            "Bloco de concreto",
+            "Cimento",
+            "Areia",
+            "Pilar de ferro",
+            "Reboco",
+            "Portão"
+          ]
+        },
+        {
+          "nome": "Reforma",
+          "itens": [
+            "Massa corrida",
+            "Tinta",
+            "Piso",
+            "Azulejo",
+            "Gesso",
+            "Fiação elétrica",
+            "Encanamento"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sites",
+      "nome": "Sites",
+      "subcategorias": [
+        {
+          "nome": "Site institucional",
+          "itens": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Vue.js",
+            "WordPress"
+          ]
+        },
+        {
+          "nome": "Loja virtual",
+          "itens": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Python",
+            "Django",
+            "Banco de dados",
+            "Pagamento online"
+          ]
+        },
+        {
+          "nome": "Sistema web",
+          "itens": [
+            "Python",
+            "Node.js",
+            "Vue.js",
+            "API REST",
+            "PostgreSQL",
+            "Login de usuários"
+          ]
+        },
+        {
+          "nome": "Landing page",
+          "itens": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Formulário de contato"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "carros",
+      "nome": "Manutenção de carros",
+      "subcategorias": [
+        {
+          "nome": "Lataria e funilaria",
+          "itens": [
+            "Porta",
+            "Capô",
+            "Para-choque",
+            "Pintura",
+            "Massa plástica",
+            "Retrovisor"
+          ]
+        },
+        {
+          "nome": "Motor",
+          "itens": [
+            "Óleo",
+            "Filtro de óleo",
+            "Vela",
+            "Correia dentada",
+            "Bomba d'água",
+            "Radiador"
+          ]
+        },
+        {
+          "nome": "Freios e suspensão",
+          "itens": [
+            "Pastilha de freio",
+            "Disco de freio",
+            "Amortecedor",
+            "Mola",
+            "Pivô",
+            "Fluido de freio"
+          ]
+        },
+        {
+          "nome": "Parte elétrica",
+          "itens": [
+            "Bateria",
+            "Alternador",
+            "Faróis",
+            "Lâmpadas",
+            "Fusíveis",
+            "Motor de partida"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marcenaria",
+      "nome": "Marcenaria",
+      "subcategorias": [
+        {
+          "nome": "Móveis planejados",
+          "itens": [
+            "MDF",
+            "Dobradiça",
+            "Puxador",
+            "Parafuso",
+            "Cola",
+            "Verniz"
+          ]
+        },
+        {
+          "nome": "Portas e janelas",
+          "itens": [
+            "Madeira maciça",
+            "Batente",
+            "Fechadura",
+            "Vidro",
+            "Verniz",
+            "Dobradiça"
+          ]
+        }
+      ]
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json",
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Gabriel Henrique Barroso Pinto",
+      "email": "gabriel.comhenrique1@gmail.com",
+      "senhaHash": "0c3fd6ec7bc3e85589e136ebeb114893:be8ea3f94186873daa47eacbb71781845259c7db56b247d0f7a6dc25fc97c79bfa2489d79b2b8c1b45af5985487646981e5e789f12bdeeabba37b9718b957fe3",
+      "criadoEm": "2026-10-06T16:50:46.598Z",
+      "projetos": [
+        {
+          "id": 2,
+          "nome": "meu site",
+          "descricao": "um site top",
+          "categoria": "Sites",
+          "subcategoria": "Sistema web",
+          "itens": [
+            {
+              "nome": "Node.js",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            },
+            {
+              "nome": "Vue.js",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            },
+            {
+              "nome": "API REST",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            },
+            {
+              "nome": "PostgreSQL",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            },
+            {
+              "nome": "Login de usuários",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            }
+          ],
+          "orcamento": 100,
+          "responsavel": "Gabriel Henrique Barroso Pinto",
+          "dataCriacao": "2026-10-06",
+          "prazo": "2026-10-28",
+          "status": "Concluído",
+          "progresso": 100,
+          "prioridade": "Média",
+          "favorito": false
+        },
+        {
+          "id": 3,
+          "nome": "Cu",
+          "descricao": "egwrghetrh",
+          "categoria": "Sites",
+          "subcategoria": "Sistema web",
+          "itens": [
+            {
+              "nome": "Vue.js",
+              "quantidade": 1,
+              "valorUnitario": 100,
+              "comprado": true
+            },
+            {
+              "nome": "PostgreSQL",
+              "quantidade": 1,
+              "valorUnitario": 5000,
+              "comprado": false
+            },
+            {
+              "nome": "Node.js",
+              "quantidade": 1,
+              "valorUnitario": 1000,
+              "comprado": false
+            },
+            {
+              "nome": "HTML",
+              "quantidade": 5,
+              "valorUnitario": 50,
+              "comprado": true
+            }
+          ],
+          "orcamento": 7000.01,
+          "responsavel": "Gabriel Henrique Barroso Pinto",
+          "dataCriacao": "2026-10-06",
+          "prazo": "2026-10-09",
+          "status": "Planejamento",
+          "progresso": 20,
+          "prioridade": "Alta",
+          "favorito": true
+        },
+        {
+          "id": 4,
+          "nome": "Arthur narutinho",
+          "descricao": "Gosto de madeira",
+          "categoria": "Marcenaria",
+          "subcategoria": "Portas e janelas",
+          "itens": [
+            {
+              "nome": "Madeira maciça",
+              "quantidade": 67,
+              "valorUnitario": 6777,
+              "comprado": true
+            },
+            {
+              "nome": "Batente",
+              "quantidade": 67,
+              "valorUnitario": 677,
+              "comprado": true
+            },
+            {
+              "nome": "Fechadura",
+              "quantidade": 67,
+              "valorUnitario": 67,
+              "comprado": false
+            },
+            {
+              "nome": "Vidro",
+              "quantidade": 67,
+              "valorUnitario": 6777,
+              "comprado": false
+            },
+            {
+              "nome": "Dobradiça",
+              "quantidade": 67,
+              "valorUnitario": 66777,
+              "comprado": false
+            },
+            {
+              "nome": "Verniz",
+              "quantidade": 67,
+              "valorUnitario": 6,
+              "comprado": false
+            },
+            {
+              "nome": "Tronco",
+              "quantidade": 67,
+              "valorUnitario": 7,
+              "comprado": false
+            }
+          ],
+          "orcamento": 9999999.86,
+          "responsavel": "Gabriel Henrique Barroso Pinto",
+          "dataCriacao": "2026-10-06",
+          "prazo": "2026-10-05",
+          "status": "Em andamento",
+          "progresso": 30,
+          "prioridade": "Baixa",
+          "favorito": false
+        },
+        {
+          "id": 5,
+          "nome": "tung tung sahur",
+          "descricao": "BAsrao",
+          "categoria": "Manutenção de carros",
+          "subcategoria": "Freios e suspensão",
+          "itens": [
+            {
+              "nome": "Pastilha de freio",
+              "quantidade": 13,
+              "valorUnitario": 100,
+              "comprado": false
+            },
+            {
+              "nome": "Disco de freio",
+              "quantidade": 10,
+              "valorUnitario": 10000,
+              "comprado": true
+            },
+            {
+              "nome": "Amortecedor",
+              "quantidade": 10,
+              "valorUnitario": 2998,
+              "comprado": false
+            },
+            {
+              "nome": "Pivô",
+              "quantidade": 10,
+              "valorUnitario": 5675,
+              "comprado": false
+            },
+            {
+              "nome": "Fluido de freio",
+              "quantidade": 8,
+              "valorUnitario": 2453,
+              "comprado": true
+            },
+            {
+              "nome": "Mola",
+              "quantidade": 4,
+              "valorUnitario": 5,
+              "comprado": false
+            },
+            {
+              "nome": "Volante",
+              "quantidade": 2,
+              "valorUnitario": 1234,
+              "comprado": true
+            }
+          ],
+          "orcamento": 300000,
+          "responsavel": "tung tung sahur balelina capputhina",
+          "dataCriacao": "2026-10-01",
+          "prazo": "2026-10-08",
+          "status": "Em andamento",
+          "progresso": 35,
+          "prioridade": "Média",
+          "favorito": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "luiz",
+      "email": "luizprof@gmail.com",
+      "senhaHash": "5e1bdd00c763493cd70ff8fd25361cd7:cbc56f2970cb7ed809024dae39d3b20e8545f614ab779c3c2851e8753e55530f63317d0472e61c950f04caa52b3b0bace852fe46d0d9068f662097447c8d8b64",
+      "criadoEm": "2026-10-06T16:51:33.860Z",
+      "projetos": [
+        {
+          "id": 1,
+          "nome": "casa de praia",
+          "descricao": "uma sala basica e cofortavel",
+          "categoria": "Construção",
+          "subcategoria": "Casa residencial",
+          "itens": [
+            {
+              "nome": "Tijolo",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            },
+            {
+              "nome": "Cimento",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            },
+            {
+              "nome": "Areia",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            },
+            {
+              "nome": "Ferro",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            },
+            {
+              "nome": "Brita",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            },
+            {
+              "nome": "Telha",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            },
+            {
+              "nome": "Piso",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            },
+            {
+              "nome": "Tinta",
+              "quantidade": 1,
+              "valorUnitario": 0,
+              "comprado": false
+            }
+          ],
+          "orcamento": 500000,
+          "responsavel": "luiz",
+          "dataCriacao": "2026-10-06",
+          "prazo": "2026-10-23",
+          "status": "Planejamento",
+          "progresso": 0,
+          "prioridade": "Média",
+          "favorito": false
+        }
+      ]
+    }
+  ],
+  "contadores": {
+    "usuarios": 2,
+    "projetos": 5
+  }
+}
